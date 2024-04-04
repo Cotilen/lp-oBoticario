@@ -1,0 +1,29 @@
+#home{
+    background-image:url(../img/rosto-home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+}
+
+.container__home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    padding-top: 300px;
+    margin-left: 200px;
+}
+
+.container__home h2{
+   width: 150px; 
+   display: flex;
+   text-align: center;
+}
+.line{
+    width: 5px;
+    height: 150px;
+    background-color: white;
+}
+

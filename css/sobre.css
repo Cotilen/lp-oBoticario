@@ -1,0 +1,30 @@
+#sobre{
+    background-image: url(../img/sobre.png);
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    color: white;
+}
+
+.container__sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.container__sobre h2{
+    padding-bottom: 5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container__sobre p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 900px;
+}
+
+

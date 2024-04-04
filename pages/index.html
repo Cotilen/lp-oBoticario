@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/sobre.css">
+    <link rel="stylesheet" href="../css/produtos.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/contato.css">
+    <script src="https://kit.fontawesome.com/78c0e1b8e9.js" crossorigin="anonymous"></script>
+    <script src="../js/index.js" defer></script>
+    <title>Boticario</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/simbolo.png" alt="Logo oboticario">
+            <h1>oBoticario</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="home" id="home">
+            <div class="container__home">
+                <h2>Onde tem amor, tem beleza!</h2>
+                <div class="line"></div>
+            </div>
+        </section>
+        <section class="sobre" id="sobre">
+            <div class="container__sobre">
+                <h2>A Marca de Beleza Mais Amada do Brasil</h2>
+                <p>Abrace a essência da sua beleza e desperte os sentidos com a variedade de produtos irresistíveis do
+                    Boticário, feitos para cada momento especial da sua jornada. Revele a verdadeira essência do seu ser
+                    e celebre a beleza única que há em você.</p>
+            </div>
+        </section>
+        <section class="produtos" id="produtos">
+            <div class="container__produtos">
+                <h2>Explore nossa seleção de produtos para todos os momentos do seu dia.</h2>
+                <div class="carrossel__container">
+                    <div class="carrossel">
+                        <!-- Lily -->
+                        <a class="produto" onclick="mudarEstado('lily')" href="#lily">
+                            <img src="../img/lily-carrossel.png" alt="Imagem do produto lily">
+                            <h3>L'eau de Lily Soleil</h3>
+                        </a>
+                        <!--Malbec Bleu  -->
+                        <a class="produto" onclick="mudarEstado('malbec-bleu')" href="#malbec-bleu">
+                            <img src="../img/malbec-bleu-carrossel.png" alt="Imagem do produto malbec bleu">
+                            <h3>Malbec Ultra Bleu</h3>
+                        </a>
+                        <!-- Elysee -->
+                        <a class="produto" onclick="mudarEstado('elysee')" href="#elysee">
+                            <img src="../img/elyse-carrossel.png" alt="Imagem do produto elyse">
+                            <h3>Elysée Eau de Parfum</h3>
+                        </a>
+                        <!-- Malbec -->
+                        <a class="produto" onclick="mudarEstado('malbec')" href="#malbec">
+                            <img src="../img/malbec-carrosel.png" alt="Imagem do produto malbec">
+                            <h3>Malbec</h3>
+                        </a>
+                        <!-- Botica -->
+                        <a class="produto" onclick="mudarEstado('botica')" href="#botica">
+                            <img src="../img/botica-carrossel.png" alt="Imagem do produto botica 214">
+                            <h3>Botica 214 Verano en Firenze</h3>
+                        </a>
+                        <!-- Malbec Gold -->
+                        <a class="produto" onclick="mudarEstado('malbec-gold')" href="#malbec-gold">
+                            <img src="../img/malbec-gold-carro0ssel.png" alt="Imagem do produto malbc gold">
+                            <h3>Malbec Gold</h3>
+                        </a>
+                    </div>
+                    <button class="anterior-btn"></button>
+                    <button class="proximo-btn"></button>
+                </div>
+                <!-- Lily -->
+                <div class="descricao__produto" id="lily">
+                    <div class="card-elipse">
+
+                        <a onclick="mudarEstado('lily')" href="#lily">
+                            <h2>L'eau de Lily Soleil</h2>
+                            <img src="../img/elipse-lily.png" alt="Imagem do produto lily dentro de uma elipse">
+                        </a>
+                    </div>
+                    <p>Para aquelas que almejam o protagonismo da própria história e a descoberta da melhor versão
+                        de si, L'eau de Lily Soleil traz um novo olfativo floral para uma rotina mais perfumada.
+                        L'eau de Lily Soleil traz uma fragrância agradável como um encontro da brisa do mar com a
+                        exuberância do nascer do Sol. 
+                        Como todo amanhecer representa algo novo, Lily acredita que todo dia representa uma
+                        oportunidade para você ser quem realmente é, reforçando suas escolhas e protagonizando seu
+                        próprio enredo.
+                        Com Lily você tem frescor e sofisticação para o seu dia com um segredinho: Ylang Ylang, uma
+                        flor de Madagascar que floresce no encontro da brisa do mar com a exuberância do nascer do
+                        Sol.</p>
+                </div>
+                <!--Malbec Bleu  -->
+                <div class="descricao__produto" id="malbec-bleu">
+                    <p>Malbec Boticário convida você, homem seguro de si, a sentir o frescor marcante, intenso e
+                        profundo de Malbec Ultra Bleu, a versão mais intensa e marcante de Malbec Bleu.
+                        Sua fragrância amadeirada e fresca é envolvida por uma perfumação impactante que traz notas
+                        ultra refrescantes do vinho francês maturado no fundo do mar mediterrâneo. 
+                        Inspirado na profundidade do oceano, Malbec Ultra Bleu traz um frescor intenso, combinado à
+                        força do amadeirado de Malbec. Como um mergulho à noite, a embalagem apresenta o tom do azul
+                        noturno e um efeito fosco que remete ao gelado do fundo mar, para você mergulhar nessa
+                        fragrância que apresenta mais refrescância e um toque novo de intensidade</p>
+                    <div class="card-elipse">
+                        <a onclick="mudarEstado('malbec-bleu')" href="#malbec-bleu">
+                            <h2>Malbec Ultra Bleu</h2>
+                            <img src="../img/elipse-malbec-bleu.png"
+                                alt="Imagem do produto malbec bleu dentro de uma elipse">
+                        </a>
+                    </div>
+                </div>
+                <!-- Elysee -->
+                <div class="descricao__produto" id="elysee">
+                    <div class="card-elipse">
+                        <a onclick="mudarEstado('elysee')" href="#elysee">
+                            <h2>Elysée Eau de Parfum</h2>
+                            <img src="../img/elipse-elysee.png" alt="Imagem do produto elysee dentro de uma elipse">
+                        </a>
+                    </div>
+                    <p>O Elysée Eau de Parfum possui uma embalagem extremamente sofisticada que remete a uma joia. A sua
+                        fragrância feminina contém matérias-primas de alta qualidade e riqueza como a Mandarina Orpur,
+                        que remete a extrema sofisticação da família olfativa Chypre. 
+                        Ela é modernizada por notas ambaradas, uma grande tendência da perfumaria feminina
+                        internacional, perfeito por quem se interessa por fragrâncias marcantes. 
+                        Por ser um Eau De Parfum, possui maior concentração de óleos essenciais e, matérias-primas de
+                        alta qualidade, por isso, tem maior durabilidade na pele.  
+                        É um produto vegano e não possui nenhum ingrediente de origem animal. </p>
+                </div>
+                <!--Malbec-->
+                <div class="descricao__produto" id="malbec">
+                    <p>Malbec é uma fragrância única e desenvolvida através de um processo de fabricação exclusivo no
+                        mundo.
+                        Sendo a primeira fragrância da linha Malbec e a mais querida entre os homens, traz como
+                        inspiração o mundo dos vinhos para a perfumaria masculina. O álcool vínico, obtido através da
+                        fermentação da uva, é envelhecido em barris de carvalho francês, iguais àqueles em que descansam
+                        os melhores vinhos do mundo.
+                        Feito de notas frescas e amadeiradas com base de Ameixa, Carvalho e Baunilha, Malbec Desodorante
+                        Colônia representa a masculinidade de forma única. Ideal para homens que sabem se impor. Que são
+                        notados por onde passam. Que têm a essência da conquista em tudo o que fazem.
+                    </p>
+                    <div class="card-elipse">
+                        <a onclick="mudarEstado('malbec')" href="#malbec">
+                            <h2>Malbec</h2>
+                            <img src="../img/elipse-malbec.png" alt="Imagem do produto malbec dentro de uma elipse">
+                        </a>
+                    </div>
+                </div>
+                <!-- Botica -->
+                <div class="descricao__produto" id="botica">
+                    <div class="card-elipse">
+                        <a onclick="mudarEstado('botica')" href="#botica">
+                            <h2>Botica 214 Verano en Firenze</h2>
+                            <img src="../img/elipse-botica.png" alt="Imagem do produto botica dentro de uma elipse">
+                        </a>
+                    </div>
+                    <p>A fragrância do Eau de Parfum foi inspirada na perfumaria internacional  e viajou até a cidade de
+                        Florença, na Itália, para a festa de San Giovanni: uma comemoração que celebra o amor e o dia
+                        mais longo do verão italiano.
+                        Após o pôr-do-sol, ervas e flores colhidas ao longo do dia, são colocadas em água e deixadas ao
+                        ar livre durante toda a noite, para que possam absorver o orvalho da manhã. Na manhã do dia
+                        seguinte, a ‘L’acqua di San Giovanni’ (água de San Giovanni) é usada para lavar as mãos e o
+                        rosto, em um momento de celebração e prosperidade.</p>
+                </div>
+                <!--Malbec Gold-->
+                <div class="descricao__produto" id="malbec-gold">
+                    <p>O Malbec Gold traz uma fragrância cheia de surpresas com ingredientes tão valiosos quanto o ouro.
+                        Para atrair ainda mais olhares, Malbec Gold apresenta a exclusiva tecnologia GoldSense, trazendo
+                        uma fragrância intensa e marcante para aumentar o seu poder de atração.
+                        Sua pirâmide olfativa é uma combinação de notas especiadas e cítricas com frescor e
+                        masculinidade. A flor de laranjeira no coração é envolvida por madeiras robustas que, junto com
+                        o acorde exclusivo, trazem uma aura de sensualidade e poder. Por fim, o complexo de notas de
+                        couro traz virilidade e forças às notas de fundo.
+                        Malbec Gold é da família olfativa Amadeirada Ambarada e é uma fragrância masculina quente! 
+                    </p>
+                    <div class="card-elipse">
+                        <a onclick="mudarEstado('malbec-gold')" href="#malbec-gold">
+                            <h2>Malbec Gold</h2>
+                            <img src="../img/elipse-malbec-gold.png" alt="Imagem do produto malbec gold dentro de uma elipse">
+                        </a>
+                    </div>
+                </div>
+        </section>
+        <section class="contato" id="contato">
+            <img src="../img/entrada.png" alt="">
+            <div class="contatos">
+                <h1>Ficou com alguma dúvida?</h1>
+                <h2>Entre em contato:</h2>
+                <p><i class="fa-solid fa-envelope"></i> cleitonncruz105@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> (11)95161-2029</p>
+                <p><i class="fa-brands fa-github"></i> github.com/cotilen</p>
+
+            </div>
+        </section>
+    </main>
+
+    <div class="line-footer"></div>
+    <footer>2024 Cleiton Cruz || Todos os direitos reservados.</footer>
+
+</body>
+
+</html>

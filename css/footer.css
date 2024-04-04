@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+    height: 30px;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.line-footer{
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin-top: 10px;
+}
