@@ -2,7 +2,7 @@ const carouselSlide = document.querySelector('.carrossel');
 const cards = document.querySelectorAll('.produto');
 
 let counter = 0;
-const cardWidth = cards[0].clientWidth;
+const cardWidth = cards[0].clientWidth + 40;
 
 function slide() {
   carouselSlide.style.transform = `translateX(${-cardWidth * counter}px)`;
