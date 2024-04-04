@@ -20,10 +20,32 @@
    width: 150px; 
    display: flex;
    text-align: center;
+   animation-duration: 4s;
+   animation-name: animacao2;
 }
 .line{
     width: 5px;
     height: 150px;
     background-color: white;
+    animation-duration: 3s;
+    animation-name: animacao1;
+}
+
+@keyframes animacao1 {
+    from {
+        transform: translatey(-200%)
+    }
+    to {
+        transform: translatey(0%);
+    }
+}
+
+@keyframes animacao2 {
+    from {
+        transform: translateX(-150%)
+    }
+    to {
+        transform: translateX(0%);
+    }
 }
 
