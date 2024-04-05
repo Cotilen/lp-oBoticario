@@ -29,7 +29,7 @@
         height: 182px;
     }
 
-    
+
     .card-elipse img {
         width: 300px;
         height: 391PX;
@@ -42,21 +42,22 @@
 
     }
 
-    .logo{
-        padding-left: 40px;
+    .logo {
+        padding-left: 30px;
         font-size: 10px;
     }
-    
-    .logo img{
+
+    .logo img {
         width: 21px;
         height: 50px;
         margin-right: 10px;
     }
 
-    .menu ul{
+    #menu {
         font-size: 1rem;
         width: 300px;
     }
+
     #home {
         background-image: url(../img/rosto-home-inverso.png);
     }
@@ -65,16 +66,16 @@
         display: none;
     }
 
-    .descricao__produto{
+    .descricao__produto {
         flex-direction: column;
     }
 }
 
 @media(max-width: 500px) {
-    .menu {
-        display: none;
+    .container__home{
+        margin-left: 100px;
     }
-
+    
     .container__sobre {
         text-align: center;
     }
@@ -91,11 +92,39 @@
         height: 310px;
     }
 
+.descricao__produto h2{
+    padding-top: 10px;
+}
+
     .descricao__produto p {
         width: 350px;
     }
 
     footer {
         font-size: 1rem;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        gap: 8px;
+    }
+
+    .menu ul.show {
+        display: flex;
+    }
+
+    .menu li {
+        margin-right: 0;
+    }
+
+    .bars {
+        display: block;
     }
 }

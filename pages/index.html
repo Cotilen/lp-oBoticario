@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/sobre.css">
     <link rel="stylesheet" href="../css/produtos.css">
@@ -24,12 +25,14 @@
             <h1>oBoticario</h1>
         </div>
         <nav class="menu">
-            <ul>
+            <ul id="menu" onclick="abrirMenu()">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
+            
+            <a class="bars" onclick="abrirMenu()" ><i class="fa-solid fa-bars"></i></a>
         </nav>
     </header>
     <main>

@@ -1,35 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-ul,
-il,
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-:root{
-    --primary-color: #F1DDB4;
-    --secondary-color: #70967F;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    height: 100vh;
-}
-
 header{
     height: 80px;
     display: flex;
@@ -59,10 +27,22 @@ header{
     width: 400px;
     font-weight: bolder;
     padding-right: 40px;
-}
+    list-style-type: none;
 
-main{
-    display: flex;
-    flex-direction: column;
-    height: max-content;
 }
+  
+  .menu li {
+    margin-right: 15px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .bars {
+    display: none;
+    font-size: 2rem;
+    padding-right: 30px;
+
+  }

@@ -28,3 +28,9 @@ function mudarEstado(elemento) {
       document.getElementById(elemento).style.display = "flex";
   }
 }
+
+function abrirMenu() {
+  var menu = document.getElementById("menu");
+  menu.classList.toggle("show");
+  document.body.classList.toggle("menu-open");
+}

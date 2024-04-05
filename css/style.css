@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+il,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root{
+    --primary-color: #F1DDB4;
+    --secondary-color: #70967F;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    height: 100vh;
+}
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+
