@@ -7,7 +7,7 @@ header{
 }
 
 .logo{
-    padding-left: 80px;
+    padding-left: 50px;
     display: flex;
     align-items: center;
 }
@@ -30,10 +30,6 @@ header{
     list-style-type: none;
 
 }
-  
-  .menu li {
-    margin-right: 15px;
-  }
   
   .menu a {
     text-decoration: none;
