@@ -2,7 +2,7 @@ const carouselSlide = document.querySelector('.carrossel');
 const cards = document.querySelectorAll('.produto');
 
 let counter = 0;
-const cardWidth = cards[0].clientWidth + 40;
+const cardWidth = cards[0].clientWidth + 31;
 
 function slide() {
   carouselSlide.style.transform = `translateX(${-cardWidth * counter}px)`;
@@ -19,7 +19,6 @@ document.querySelector('.anterior-btn').addEventListener('click', () => {
   counter--;
   slide();
 });
-
 function mudarEstado(elemento) {
   let display = document.getElementById(elemento).style.display;
   if (display == "flex") {
@@ -34,3 +33,31 @@ function abrirMenu() {
   menu.classList.toggle("show");
   document.body.classList.toggle("menu-open");
 }
+
+  const imgs = document.getElementById('img')
+  const img = document.querySelectorAll('#img img')
+
+  let index = 0
+
+  function carousel(){
+    index++
+
+    if(index > img.length -1){
+      index = 0
+    }
+
+  if(window.innerWidth <= 900){
+    imgs.style.transform =`translateX(${-index * 300}px)`
+    console.log("300");
+  }else if(window.innerWidth <= 1050){
+    imgs.style.transform =`translateX(${-index * 500}px)`
+    console.log(500);
+  }else{
+    imgs.style.transform =`translateX(${-index * 640}px)`
+    console.log(640);
+  }
+
+  }
+
+  setInterval(carousel, 3000)
+  

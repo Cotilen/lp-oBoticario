@@ -7,7 +7,7 @@
 }
 
 .contato img{
-    width: 800px;
+    width: 640px;
     height: 485px;
 }
 
@@ -27,4 +27,17 @@
     font-size: 1rem;
     font-weight: bold;
     padding-bottom: 10px;
+}
+
+.slide{
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 485px;
+    width: 640px;
+}
+
+.container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
 }

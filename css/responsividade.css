@@ -7,7 +7,7 @@
     }
 
     .contato img {
-        width: 500px;
+        min-width: 500px;
         height: 303px;
     }
 
@@ -20,12 +20,18 @@
         font-size: 1rem;
         ;
     }
+
+    .slide {
+        height: 303px;
+        width: 500px;
+    }
+
 }
 
 @media (max-width: 900px) {
 
     .contato img {
-        width: 300px;
+        min-width: 300px;
         height: 182px;
     }
 
@@ -33,6 +39,11 @@
     .card-elipse img {
         width: 300px;
         height: 391PX;
+    }
+
+    .slide {
+        width: 300px;
+        height: 182px;
     }
 }
 
@@ -62,8 +73,22 @@
         background-image: url(../img/rosto-home-inverso.png);
     }
 
-    .contato img {
+    .contato{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato h1{
         display: none;
+    }
+
+    .contato h2 {
+        padding-top: 15px;
+    }
+
+    .slide {
+        height: 182px;
+        width: 300px;
     }
 
     .descricao__produto {
@@ -72,10 +97,10 @@
 }
 
 @media(max-width: 500px) {
-    .container__home{
+    .container__home {
         margin-left: 100px;
     }
-    
+
     .container__sobre {
         text-align: center;
     }
@@ -87,14 +112,9 @@
         text-align: justify;
     }
 
-    .produto img {
-        width: 270px;
-        height: 310px;
+    .descricao__produto h2 {
+        padding-top: 10px;
     }
-
-.descricao__produto h2{
-    padding-top: 10px;
-}
 
     .descricao__produto p {
         width: 350px;
@@ -127,4 +147,28 @@
     .bars {
         display: block;
     }
+
+    .produto{
+        width: 350px;
+        margin-left: 27px;
+    }
+
+    .produto img {
+        width: 250px;
+        height: 290px;
+    }
+
+    .anterior-btn {
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 15px solid var(--secondary-color);
+
+    }
+
+    .proximo-btn {
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 15px solid var(--secondary-color);
+    }
+
 }
