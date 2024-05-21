@@ -30,6 +30,11 @@ header{
     list-style-type: none;
 
 }
+
+.menu{
+  display: flex;
+  flex-direction: row;
+}
   
   .menu a {
     text-decoration: none;

@@ -60,4 +60,40 @@ function abrirMenu() {
   }
 
   setInterval(carousel, 3000)
+
+  const lightTheme = {
+    '--primary-color': '#70967F',
+    '--secondary-color': '#F1DDB4',
+
+}
+
+const darkTheme = {
+    '--primary-color': '#F1DDB4',
+    '--secondary-color': '#70967F',
+}
+
+const chk = document.getElementById('chk')
+const rootElement = document.documentElement
+
+chk.addEventListener('change', function() {
+    const isChecked = chk.checked
+
+    isChecked ? changeTheme(lightTheme) : changeTheme(darkTheme)
+
+
+})
+
+function changeTheme(theme) {
+
+    for (let prop in theme) {
+        changeProperty(prop, theme[prop])
+    }
+
+}
+
+function changeProperty(property, value) {
+    rootElement.style.setProperty(property, value)
+
+}
+
   
