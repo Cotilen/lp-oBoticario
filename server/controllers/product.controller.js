@@ -20,4 +20,22 @@ router.get("/product", cors(), bodyJSON, async function(request, response){
     response.json(product)
 })
 
+router.put("/product/:id", cors(), bodyJSON, async function(request,response){
+
+    let idProduct = request.params.id
+    let dadosJson = request.body
+    let product = await productService.updateProduct(idProduct,dadosJson)
+
+    response.json({product})
+})
+
+router.delete("/product/:id", cors(), bodyJSON, async function(request,response){
+    let idProduct = request.params.id
+    let product = await productService.deleteProduct(idProduct)
+
+    response.status(product.status)
+    response.json(product)
+})
+
+
 module.exports = router;
