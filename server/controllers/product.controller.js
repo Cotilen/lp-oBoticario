@@ -10,8 +10,7 @@ router.post("/product",  cors(), bodyJSON, async function(request, response){
 
     let products = await productService.registerProduct(dadosJson)
 
-    response.json(products.message)
-    response.status(products.status)
+    response.json({products})
 })
 
 router.get("/product", cors(), bodyJSON, async function(request, response){
