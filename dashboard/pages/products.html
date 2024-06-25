@@ -1,0 +1,75 @@
+
+
+<div class="table-container">
+    <h1>Registro dos produtos cadastrados</h1>
+    <table class="records" id="table">
+        <thead>
+            <tr class="fields-table-header">
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Imagem Principal</th>
+                <th>Imagem Secundária</th>
+                <th>Ações</th>
+            </tr>   
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="div-button">
+    <button class="button" id="myBtn">Cadastrar Produto</button>
+</div>
+
+<div id="myModal" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Cadastre um produto</h2>
+          </div>
+          <form id="form">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required>
+            <label for="descricao">Descrição</label>
+            <textarea name="descricao" id="descricao" required></textarea>
+            <label for="imagemP">Imagem Principal</label>
+            <input type="file" name="imagemP" id="imagemP" required>
+            <label for="imagemS">Imagem Secundária</label>
+            <input type="file" name="imagemS" id="imagemS" required>
+        </form>
+        <div class="modal-button">
+            <button class="button-modal" id="register-product">Cadastrar Produto</button>
+        </div>
+    </div>
+  
+  </div>
+
+  <div id="modalEdit" class="modal">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Editar Produto</h2>
+          </div>
+          <form id="formEdit">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nomeEdit" required>
+            <label for="descricao">Descrição</label>
+            <textarea name="descricao" id="descricaoEdit" required></textarea>
+            <label for="imagemP">Imagem Principal</label>
+            <div class="aviso">Imagem já cadastrada, selecione um arquivo somente se desejar trocá-la</div>
+            <input type="file" name="imagemP" id="imagemPEdit" >
+            <label for="imagemS">Imagem Secundária</label>
+            <div class="aviso">Imagem já cadastrada, selecione um arquivo somente se desejar trocá-la</div>
+            <input type="file" name="imagemS" id="imagemSEdit" >
+        </form>
+        <div class="modal-button">
+            <button class="button-modal" id="edit-product">Editar</button>
+        </div>
+    </div>
+  
+  </div>
+
+

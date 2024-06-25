@@ -8,6 +8,8 @@ require('./database/connection')
 
 const productController = require('./controllers/product.controller')
 const galleryController = require('./controllers/gallery.controller')
+
+app.use(cors());
 app.use((request, response, next) => {
     response.header('Access-Control-Allow-Origin', '*')
 
@@ -19,9 +21,7 @@ app.use((request, response, next) => {
 })
 
 app.use(productController)
-app.use(galleryController
-    
-)
+app.use(galleryController)
 
 app.listen(8080, function() {
     console.log('Servidor aguardando requisições');

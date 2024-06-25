@@ -10,13 +10,14 @@ router.post("/product",  cors(), bodyJSON, async function(request, response){
 
     let products = await productService.registerProduct(dadosJson)
 
-    response.json({products})
+    response.status(products.status).json({products})
 })
 
 router.get("/product", cors(), bodyJSON, async function(request, response){
     let product = await productService.findProducts()
 
     response.json(product)
+
 })
 
 router.put("/product/:id", cors(), bodyJSON, async function(request,response){
@@ -32,8 +33,8 @@ router.delete("/product/:id", cors(), bodyJSON, async function(request,response)
     let idProduct = request.params.id
     let product = await productService.deleteProduct(idProduct)
 
-    response.status(product.status)
-    response.json(product)
+    response.status(products.status).json({products})
+
 })
 
 
