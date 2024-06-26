@@ -3,9 +3,14 @@
     border: 5px ridge var(--primary-color);
     border-radius: 20px;
     background-color: var(--primary-color);
-    margin-top: 15px;
+    margin-top: 5px;
     width: 80%;
-    max-height: 85%;
+    height: 84%;
+    max-height: 83%;
+  }
+
+  h4{
+    margin-top: 5px;
   }
 
   .table-container h1 {
@@ -34,6 +39,10 @@
     word-wrap: break-word;
     overflow-y: auto;
     white-space: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
   }
   
   .table-container::-webkit-scrollbar, .scroll::-webkit-scrollbar {

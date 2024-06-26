@@ -16,7 +16,7 @@ router.post("/product",  cors(), bodyJSON, async function(request, response){
 router.get("/product", cors(), bodyJSON, async function(request, response){
     let product = await productService.findProducts()
 
-    response.json(product)
+    response.json({product})
 
 })
 
@@ -33,7 +33,7 @@ router.delete("/product/:id", cors(), bodyJSON, async function(request,response)
     let idProduct = request.params.id
     let product = await productService.deleteProduct(idProduct)
 
-    response.status(products.status).json({products})
+    response.status(product.status).json({product})
 
 })
 

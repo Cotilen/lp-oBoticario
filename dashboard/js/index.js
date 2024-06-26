@@ -2,7 +2,9 @@
 import { createTableProducts } from '../js/products.js';
 import { openModal } from '../js/products.js';
 import { registerProduct } from '../js/products.js';
-import { pegarProdutos } from './services.js';
+import { createTableGallery, openModalGallery, registerGallery } from './gallery.js';
+import { pegarProdutos } from './services/product.js';
+import { pegarGaleria } from './services/gallery.js';
 
 const routes = {
     "/": "../index.html",
@@ -30,7 +32,10 @@ const pathName = async (path) => {
         openModal()
         registerProduct()
     } else if (path == '/gallery') {
-        console.log("oi");
+        const lista = await pegarGaleria()
+        createTableGallery(lista)
+        openModalGallery()
+        registerGallery()
     }
 }
 

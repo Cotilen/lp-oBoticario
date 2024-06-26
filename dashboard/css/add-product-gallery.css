@@ -38,7 +38,7 @@
   padding-bottom: 20px;
 }
 
-#form, #formEdit {
+#form, #formEdit, #form-gallery, #form-gallery-edit {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,12 +54,12 @@
   margin-bottom: 10px;
 }
 
-#nome, #nomeEdit {
+#nome, #nomeEdit, #nome-gallery, #nome-gallery-edit {
   height: 30px;
   margin-bottom: 10px;
 }
 
-#imagemP, #imagemPEdit{
+#imagemP, #imagemPEdit, #imagem-gallery, #imagem-gallery-edit{
   margin-bottom: 10px;
 }
 
@@ -89,4 +89,42 @@
   font-size: 0.8rem;
   padding-bottom: 5px;
   padding-top: 5px;
+}
+
+.modal-button-delete{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+  padding-top: 15px;
+}
+
+.btn-cancel, .delete-product{
+  margin-top: 20px;
+  width: 20%;
+  background-color:#950101;
+  color: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#delete-product, #delete-gallery{
+  background-color: var(--secondary-color);
+}
+
+.fas{
+  cursor: pointer;
+}
+
+.edit-icon{
+  color: var(--primary-color);
+}
+
+.trash-icon{
+  color: #950101;
 }

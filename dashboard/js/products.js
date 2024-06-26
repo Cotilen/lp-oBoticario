@@ -1,15 +1,9 @@
 'use strict'
 
-import { criarProduto, editarProduto } from './services.js';
+import { criarProduto, deletarProduto, editarProduto } from './services/product.js';
 import { registerImage } from './saveImage.js';
-const getProducts = async () => {
-    const url = 'http://localhost:8080/products';
-    const response = await fetch(url);
-    const products = await response.json();
 
-    return products;
-}
-export const createRowTable = (product) => {
+const createRowTable = (product) => {
     const table = document.getElementById('table')
 
     const row = document.createElement('tr')
@@ -45,9 +39,13 @@ export const createRowTable = (product) => {
     const trashIcon = document.createElement('i')
     trashIcon.classList.add('fas')
     trashIcon.classList.add('fa-trash-alt')
+    trashIcon.classList.add('trash-icon')
+    
     const editIcon = document.createElement('i')
     editIcon.classList.add('fas')
     editIcon.classList.add('fa-edit')
+    editIcon.classList.add('edit-icon')
+
 
     nome.append(divNome)
     descricao.append(divDescricao)
@@ -60,6 +58,7 @@ export const createRowTable = (product) => {
 
 
     editIcon.addEventListener('click', () => {
+
         let modal = document.getElementById("modalEdit");
         let span = document.getElementsByClassName("close")[1];
         let button = document.getElementById("edit-product")
@@ -126,11 +125,40 @@ export const createRowTable = (product) => {
             }
         })
     })
+
+    trashIcon.addEventListener('click', () =>{
+
+        let modal = document.getElementById("modalDelete");
+        let span = document.getElementsByClassName("close")[2];
+        let button = document.getElementById("delete-product")
+        let buttonCancel = document.getElementById("btn-cancel")
+
+        modal.style.display = "block";
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        buttonCancel.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        button.onclick = async () =>{
+           let deleteProduct = await deletarProduto(product._id) 
+           modal.style.display = "none";
+        }
+    })
     table.append(row)
 }
 
 export const createTableProducts = (products) => {
-    products.forEach(product => {
+    products.product.forEach(product => {
         createRowTable(product)
     })
 }

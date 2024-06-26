@@ -1,5 +1,5 @@
 
-
+<h4>Após cadastrar, editar ou excluir um produto,clique na página corresponde no cabeçalho para atualizar a lista.</h4>
 <div class="table-container">
     <h1>Registro dos produtos cadastrados</h1>
     <table class="records" id="table">
@@ -23,7 +23,6 @@
 </div>
 
 <div id="myModal" class="modal">
-
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
@@ -43,11 +42,9 @@
             <button class="button-modal" id="register-product">Cadastrar Produto</button>
         </div>
     </div>
-  
   </div>
 
   <div id="modalEdit" class="modal">
-
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
@@ -69,7 +66,20 @@
             <button class="button-modal" id="edit-product">Editar</button>
         </div>
     </div>
-  
+  </div>
+
+  <div id="modalDelete" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Excluir Produto</h2>
+          </div>
+          <h2>Você realmente deseja excluir este produto?</h2>
+          <div class="modal-button-delete">
+            <button class="btn-cancel" id="btn-cancel">Não</button>
+            <button class="delete-product" id="delete-product">Sim</button>
+        </div>
+    </div>
   </div>
 
 

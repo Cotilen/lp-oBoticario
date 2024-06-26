@@ -1,19 +1,70 @@
-<div class="register-company">
-    <h1>Registro de empresas cadastradas</h1>
-    <table class="records" id="table_company">
+<h4>Após cadastrar, editar ou excluir uma imagem,clique na página corresponde no cabeçalho para atualizar a lista.</h4>
+<div class="table-container">
+    <h1>Registro das imagens cadastradas</h1>
+    <table class="records" id="table-gallery">
         <thead>
             <tr class="fields-table-header">
-                <th>ID Empresa</th>
-                <th>Razão Social</th>
-                <th>CNPJ</th>
-                <th>Telefone</th>
-                <th>Email</th>
-                <th>Mensagem</th>
-                <th>Tipo de Contato</th>
-                <th>Excluir</th>
+                <th>Nome</th>
+                <th>Imagem</th>
+                <th>Ações</th>
             </tr>   
         </thead>
         <tbody>
         </tbody>
     </table>
 </div>
+<div class="div-button">
+    <button class="button" id="btn-gallery">Cadastrar Imagem</button>
+</div>
+
+
+<div id="modal-create-gallery" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Cadastre uma imagem</h2>
+          </div>
+          <form id="form-gallery">
+            <label for="nome">Nome</label>
+            <input type="text" name="nomeImagem" id="nome-gallery" required>
+            <label for="imagemP">Imagem</label>
+            <input type="file" name="imagemP" id="imagem-gallery" required>
+        </form>
+        <div class="modal-button">
+            <button class="button-modal" id="register-gallery">Cadastrar Imagem</button>
+        </div>
+    </div>
+  </div>
+
+  <div id="modal-gallery-edit" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Editar Imagem</h2>
+          </div>
+          <form id="form-gallery-edit">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome-gallery-edit" required>
+            <label for="imagemP">Imagem</label>
+            <div class="aviso">Imagem já cadastrada, selecione um arquivo somente se desejar trocá-la</div>
+            <input type="file" name="imagemP" id="imagem-gallery-edit" >
+        </form>
+        <div class="modal-button">
+            <button class="button-modal" id="edit-gallery">Editar</button>
+        </div>
+    </div>
+  </div>
+  
+  <div id="modal-gallery-delete" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Excluir Imagem</h2>
+          </div>
+          <h2>Você realmente deseja excluir esta imagem?</h2>
+          <div class="modal-button-delete">
+            <button class="btn-cancel" id="btn-gallery-cancel">Não</button>
+            <button class="delete-product" id="delete-gallery">Sim</button>
+        </div>
+    </div>
+  </div>

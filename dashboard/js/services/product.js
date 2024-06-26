@@ -40,7 +40,6 @@ export const pegarProdutos = async () =>{
         const respose = await fetch(url); 
         const product = await respose.json()
     
-        console.log(product);
         return product    
     } catch (error) {
         console.log(error);
@@ -87,3 +86,32 @@ export const editarProduto = async (id, nome, descricao, imagemPrincipal, imagem
         console.log(error);
     }
 }
+
+export const deletarProduto = async (id) => {
+    fetch(`http://localhost:8080/product/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+    .then(response =>response.status == 200 ? response.json() : null)
+    .then(data => {
+        console.log(data);
+        if(data){
+            console.log('Success:', data);
+            Toastify({
+                text: "Produto excluído com sucesso!",
+                className: "info",
+                style: {
+                  background: "linear-gradient(to right, #0AFB3A, #026014)",
+                }
+              }).showToast();
+        }
+
+        return true
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
