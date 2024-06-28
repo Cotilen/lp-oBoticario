@@ -12,7 +12,7 @@ const createRowTable = (product) => {
 
     const nome = document.createElement('td')
     const divNome = document.createElement('div')
-    divNome.classList.add('scroll')
+    divNome.classList.add('titulo')
     divNome.textContent = product.nome
 
     const descricao = document.createElement('td')
@@ -205,10 +205,16 @@ export const registerProduct = () => {
             let imagemPrincipal = await registerImage(imagemP.files[0])
             let imagemSecundaria = await registerImage(imagemS.files[0])
 
+           
+
             let product = await criarProduto(nome, descricao, imagemPrincipal, imagemSecundaria)
             var modal = document.getElementById("myModal");
             modal.style.display = "none";
 
+            document.getElementById('nome').value = "";
+            document.getElementById("descricao").value = "";
+            document.getElementById("imagemP").value = "";
+            document.getElementById("imagemS").value = "";
         }
 
     }

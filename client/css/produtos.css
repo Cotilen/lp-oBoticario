@@ -104,3 +104,11 @@ button {
 .card-elipse h2{
     padding-bottom: 10px;
 }
+
+#container-descricao-produtos img{
+    width: 350px;
+    height: 500px;
+    border-radius: 50%;
+    border: 5px ridge var(--secondary-color);
+
+}

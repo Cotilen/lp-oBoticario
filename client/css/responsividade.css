@@ -11,9 +11,10 @@
         height: 303px;
     }
 
-    .card-elipse img {
-        width: 370px;
-        height: 482PX;
+   
+    #container-descricao-produtos img{
+        width: 300px;
+        height: 391px;
     }
 
     .descricao__produto p {
@@ -36,9 +37,9 @@
     }
 
 
-    .card-elipse img {
-        width: 300px;
-        height: 391PX;
+    #container-descricao-produtos img{
+        width: 250px;
+        height: 325px;
     }
 
     .slide {

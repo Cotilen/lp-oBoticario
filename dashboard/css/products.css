@@ -39,6 +39,11 @@
     word-wrap: break-word;
     overflow-y: auto;
     white-space: normal;
+    font-weight: bold;
+    text-align: justify;
+  }
+
+  .titulo{
     display: flex;
     align-items: center;
     justify-content: center;
