@@ -6,7 +6,7 @@ export const criarProduto = async (nome, descricao, imagemPrimaria, imagemSecund
         imagemSecundaria:imagemSecundaria
     }
 
-    fetch('http://localhost:8080/product/', {
+    fetch('https://lp-oboticario.onrender.com/product/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ export const criarProduto = async (nome, descricao, imagemPrimaria, imagemSecund
 
 export const pegarProdutos = async () =>{
     try {
-        const url = 'http://localhost:8080/product/';
+        const url = 'https://lp-oboticario.onrender.com/product/';
         const respose = await fetch(url); 
         const product = await respose.json()
     
@@ -58,7 +58,7 @@ export const editarProduto = async (id, nome, descricao, imagemPrincipal, imagem
 
         console.log(data);
     
-        fetch(`http://localhost:8080/product/${id}`, {
+        fetch(`https://lp-oboticario.onrender.com/product/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -88,7 +88,7 @@ export const editarProduto = async (id, nome, descricao, imagemPrincipal, imagem
 }
 
 export const deletarProduto = async (id) => {
-    fetch(`http://localhost:8080/product/${id}`, {
+    fetch(`https://lp-oboticario.onrender.com/product/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
