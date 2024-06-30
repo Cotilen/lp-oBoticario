@@ -9,10 +9,10 @@ const createRowTable = (gallery) => {
     row.setAttribute('class', 'table-row')
     row.id = `${gallery._id}`
 
-    const nome = document.createElement('td')
-    const divNome = document.createElement('div')
-    divNome.classList.add('scroll')
-    divNome.textContent = gallery.nome
+    const endereco = document.createElement('td')
+    const divEndereco = document.createElement('div')
+    divEndereco.classList.add('scroll')
+    divEndereco.textContent = gallery.endereco
 
 
     const imagem = document.createElement('td')
@@ -37,12 +37,12 @@ const createRowTable = (gallery) => {
     editIcon.classList.add('edit-icon')
 
 
-    nome.append(divNome)
+    endereco.append(divEndereco)
     imagem.append(img)
     acoes.append(acoesDiv)
     acoesDiv.append(editIcon, trashIcon)
 
-    row.append(nome, imagem, acoes)
+    row.append(endereco, imagem, acoes)
 
 
     editIcon.addEventListener('click', () => {
@@ -51,8 +51,8 @@ const createRowTable = (gallery) => {
         let span = document.getElementsByClassName("close")[1];
         let button = document.getElementById("edit-gallery")
 
-        let nome = document.getElementById("nome-gallery-edit");
-        nome.value = gallery.nome
+        let endereco = document.getElementById("endereco-gallery-edit");
+        endereco.value = gallery.endereco
 
         let imagemP = document.getElementById("imagem-gallery-edit");
         imagemP.value = ""
@@ -75,7 +75,8 @@ const createRowTable = (gallery) => {
 
             if (form.reportValidity()) {
                 Toastify({
-                    text: "Salvando imagem...",
+                    text: `Salvando imagem,
+                aguarde...`,
                     className: "info",
                     style: {
                         background: "linear-gradient(to right, #9FD7F9, #193073)",
@@ -85,10 +86,10 @@ const createRowTable = (gallery) => {
             if (imagemP.value !== "") {
                 imagem = await registerImage(imagemP.files[0])
 
-                await editarImagem(gallery._id, nome.value,imagem)
+                await editarImagem(gallery._id, endereco.value,imagem)
                 modal.style.display = "none";
             } else {
-                await editarImagem(gallery._id, nome.value,imagem)
+                await editarImagem(gallery._id, endereco.value,imagem)
                 modal.style.display = "none";
 
             }
@@ -160,7 +161,8 @@ export const registerGallery = () => {
     register.onclick = async function () {
         if (form.reportValidity()) {
             Toastify({
-                text: "Salvando imagem...",
+                text: `Salvando imagem,
+                aguarde...`,
                 className: "info",
                 style: {
                     background: "linear-gradient(to right, #9FD7F9, #193073)",
@@ -168,13 +170,16 @@ export const registerGallery = () => {
             }).showToast();
 
 
-            let nome = document.getElementById('nome-gallery').value;
+            let nome = document.getElementById('endereco-gallery').value;
             let img = document.getElementById("imagem-gallery");
             let imagemPrincipal = await registerImage(img.files[0])
 
             let gallery = await criarImagem(nome, imagemPrincipal)
             var modal = document.getElementById("modal-create-gallery");
             modal.style.display = "none";
+
+            document.getElementById('endereco-gallery').value = "";
+            document.getElementById("imagem-gallery").value = "";
 
         }
 

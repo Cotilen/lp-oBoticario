@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const Gallery = mongoose.model("Gallery", {
-  nome: String,
+  endereco: String,
   imagem: String,
 });
 

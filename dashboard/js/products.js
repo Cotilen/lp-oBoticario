@@ -94,7 +94,8 @@ const createRowTable = (product) => {
 
             if (form.reportValidity()) {
                 Toastify({
-                    text: "Salvando produto...",
+                    text: `Salvando produto,
+                    aguarde...`,
                     className: "info",
                     style: {
                         background: "linear-gradient(to right, #9FD7F9, #193073)",
@@ -190,7 +191,8 @@ export const registerProduct = () => {
     register.onclick = async function () {
         if (form.reportValidity()) {
             Toastify({
-                text: "Salvando produto...",
+                text: `Salvando produto,
+                    aguarde...`,
                 className: "info",
                 style: {
                     background: "linear-gradient(to right, #9FD7F9, #193073)",

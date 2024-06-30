@@ -1,11 +1,14 @@
 'use strict'
 
-import { pegarProdutos } from "./service.js";
+import { pegarGaleria, pegarProdutos } from "./service.js";
 
 const listaProdutos = await pegarProdutos()
+const galeria = await pegarGaleria()
+let contador = 0
 
 listaProdutos.product.forEach(criarDescricaoProduto)
 listaProdutos.product.forEach(criarCards)
+galeria.gallery.forEach(criarGaleria)
 criarSlide()
 carrosselGaleria()
 mudarTema()
@@ -79,19 +82,9 @@ function criarSlide() {
 
 }
 
-function mudarEstado(elemento) {
-  console.log(elemento);
-  let display = document.getElementById(elemento).style.display;
-  if (display == "flex") {
-    document.getElementById(elemento).style.display = "none";
-  } else {
-    document.getElementById(elemento).style.display = "flex";
-  }
-}
-
 function carrosselGaleria() {
   const imgs = document.getElementById('img')
-  const img = document.querySelectorAll('#img img')
+  const img = document.querySelectorAll('#img div')
 
   let index = 0
 
@@ -104,17 +97,15 @@ function carrosselGaleria() {
 
     if (window.innerWidth <= 900) {
       imgs.style.transform = `translateX(${-index * 300}px)`
-      console.log("300");
     } else if (window.innerWidth <= 1050) {
       imgs.style.transform = `translateX(${-index * 500}px)`
-      console.log(500);
     } else {
       imgs.style.transform = `translateX(${-index * 640}px)`
     }
 
   }
 
-  setInterval(carousel, 3000)
+  setInterval(carousel, 5000)
 }
 
 function mudarTema() {
@@ -153,8 +144,6 @@ function mudarTema() {
 
   }
 }
-
-``
 
 function criarDescricaoProduto(item) {
   const nomeProduto = item.nome.toLowerCase().replace(/\s+/g, '-')
@@ -195,8 +184,21 @@ function criarDescricaoProduto(item) {
   containerDescricaoProdutos.append(produto)
 }
 
+function criarGaleria(item){
+  const container =  document.getElementById('img')
 
+  const galeria = document.createElement('div')
+  galeria.classList.add('gallery')
 
+  const endereco = document.createElement('h2')
+  endereco.textContent = item.endereco
+
+  const img = document.createElement('img')
+  img.src = item.imagem
+
+  galeria.append(endereco, img)
+  container.append(galeria)
+}
 
 
 

@@ -3,12 +3,12 @@ const messages = require('./modulo/config')
 
 const registerGallery = async function (dados) {
 
-    if (dados.nome == null || dados.imagem == null || dados.nome == "" || dados.imagem == ""
-        || dados.nome == undefined || dados.imagem == undefined) {
+    if (dados.endereco == null || dados.imagem == null || dados.endereco == "" || dados.imagem == ""
+        || dados.endereco == undefined || dados.imagem == undefined) {
         return messages.ERROR_REQUIRED_DATA
     } else {
         const gallery = new Gallery({
-            nome: dados.nome,
+            endereco: dados.endereco,
             imagem: dados.imagem
         })
         await gallery.save()
@@ -24,8 +24,8 @@ const findGalleries = async function () {
 }
 
 const updateGallery = async function (id, dados) {
-    if (dados.nome == null || dados.imagem == null || dados.nome == "" || dados.imagem == ""
-        || dados.nome == undefined || dados.imagem == undefined) {
+    if (dados.endereco == null || dados.imagem == null || dados.endereco == "" || dados.imagem == ""
+        || dados.endereco == undefined || dados.imagem == undefined) {
         return messages.ERROR_REQUIRED_DATA
     } else {
         const gallery = await Gallery.findByIdAndUpdate(

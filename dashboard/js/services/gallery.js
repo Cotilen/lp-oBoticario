@@ -11,9 +11,9 @@ export const pegarGaleria = async () =>{
     
 }
 
-export const criarImagem = async (nome,imagem,) => {
+export const criarImagem = async (endereco,imagem,) => {
     const data = {
-        nome: nome,
+        endereco: endereco,
         imagem: imagem,
     }
 
@@ -44,10 +44,10 @@ export const criarImagem = async (nome,imagem,) => {
     });
 }
 
-export const editarImagem = async (id, nome, imagem) => {
+export const editarImagem = async (id, endereco, imagem) => {
     try {
         const data = {
-            nome: nome,
+            endereco: endereco,
             imagem: imagem,
         }
 
