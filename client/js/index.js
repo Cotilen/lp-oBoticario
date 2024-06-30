@@ -199,6 +199,3 @@ function criarGaleria(item){
   galeria.append(endereco, img)
   container.append(galeria)
 }
-
-
-

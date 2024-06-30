@@ -1,6 +1,6 @@
 export const pegarProdutos = async () =>{
     try {
-        const url = 'http://localhost:8080/product/';
+        const url = 'https://lp-oboticario.onrender.com/product/';
         const respose = await fetch(url); 
         const product = await respose.json()
     
@@ -13,7 +13,7 @@ export const pegarProdutos = async () =>{
 
 export const pegarGaleria = async () =>{
     try {
-        const url = 'http://localhost:8080/gallery/';
+        const url = 'https://lp-oboticario.onrender.com/gallery/';
         const respose = await fetch(url); 
         const gallery = await respose.json()
     

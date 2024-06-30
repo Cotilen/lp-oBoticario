@@ -1,6 +1,6 @@
 export const pegarGaleria = async () =>{
     try {
-        const url = 'http://localhost:8080/gallery/';
+        const url = 'https://lp-oboticario.onrender.com/gallery/';
         const respose = await fetch(url); 
         const gallery = await respose.json()
     
@@ -17,7 +17,7 @@ export const criarImagem = async (endereco,imagem,) => {
         imagem: imagem,
     }
 
-    fetch('http://localhost:8080/gallery/', {
+    fetch('https://lp-oboticario.onrender.com/gallery/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ export const editarImagem = async (id, endereco, imagem) => {
 
         console.log(data);
     
-        fetch(`http://localhost:8080/gallery/${id}`, {
+        fetch(`https://lp-oboticario.onrender.com/gallery/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ export const editarImagem = async (id, endereco, imagem) => {
 }
 
 export const deletarImagem = async (id) => {
-    fetch(`http://localhost:8080/gallery/${id}`, {
+    fetch(`https://lp-oboticario.onrender.com/gallery/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
