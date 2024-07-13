@@ -69,7 +69,17 @@ function criarSlide() {
   }
 
   document.querySelector('.proximo-btn').addEventListener('click', () => {
-    if (counter >= cards.length - 1) return;
+    if(window.innerWidth <= 425){
+      if (counter >= cards.length - 1) return;
+    }else if(window.innerWidth <= 1024){
+      if (counter >= cards.length - 2) return;
+    }else if(window.innerWidth <= 1440){
+      if (counter >= cards.length - 3) return;
+    }else if(window.innerWidth <= 1900){
+      if (counter >= cards.length - 4) return;
+    }else{
+      if (counter >= cards.length - 5) return;
+    }
     counter++;
     slide();
   });
@@ -95,8 +105,8 @@ function carrosselGaleria() {
       index = 0
     }
 
-    if (window.innerWidth <= 900) {
-      imgs.style.transform = `translateX(${-index * 300}px)`
+    if (window.innerWidth <= 450) {
+      imgs.style.transform = `translateX(${-index * 400}px)`
     } else if (window.innerWidth <= 1050) {
       imgs.style.transform = `translateX(${-index * 500}px)`
     } else {
